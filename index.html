@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tutorial Laravel 11 | UNIR - DAR Grupo C</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <!-- Barra de Navegación Institucional -->
+  <header class="navbar">
+    <div class="brand">
+      <span class="brand-unir">UNIR</span>
+      <span class="brand-divider">|</span>
+      <span class="brand-laravel">Laravel 11</span>
+      <span class="badge-group">DAR · Grupo C</span>
+    </div>
+    <nav class="nav-container">
+      <a href="index.html" class="nav-link active">📊 Dashboard</a>
+      <a href="assets/windows/windows.html" class="nav-link">🪟 Windows</a>
+      <a href="assets/linux/linux.html" class="nav-link">🐧 Linux</a>
+      <a href="#mvc" class="nav-link">🚀 Arquitectura MVC</a>
+      <a href="assets/laravel/laravel.html" class="nav-link">🔴 Laravel</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="https://github.com/jorgerickdev/DARact2_laravel-Deployment.git" target="_blank" class="btn-github">
+        <svg height="18" width="18" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero / Portada Principal -->
+    <section class="hero">
+      <div class="hero-logo-wrapper">
+        <img src="assets/imagenes/logo_laravel.png" alt="Logotipo de Laravel 11" class="hero-logo">
+      </div>
+      <h1>Tutorial de Instalación y Despliegue de Laravel en Windows y Linux</h1>
+      <p class="hero-subtitle">
+        Laboratorio técnico de instalación, resolución de dependencias (PHP 8.5, Composer 2.x) y despliegue del framework Laravel en entornos Windows y Linux. Guías paso a paso con evidencia en vídeo local y en la nube.
+      </p>
+      
+      <!-- Accesos Directos a los Módulos -->
+      <div class="hero-cta-grid hero-cta-grid-3">
+        <a href="assets/windows/windows.html" class="cta-card cta-win">
+          <div class="cta-icon">🪟</div>
+          <div class="cta-info">
+            <h3>Tutorial Windows</h3>
+            <p>Configuración en C:\PHP, PATH, php.ini y Composer.</p>
+          </div>
+          <span class="cta-arrow">→</span>
+        </a>
+
+        <a href="assets/linux/linux.html" class="cta-card cta-linux">
+          <div class="cta-icon">🐧</div>
+          <div class="cta-info">
+            <h3>Tutorial Linux</h3>
+            <p>Aprovisionamiento nativo vía apt, Zsh y CLI de Laravel.</p>
+          </div>
+          <span class="cta-arrow">→</span>
+        </a>
+
+        <a href="assets/laravel/laravel.html" class="cta-card cta-laravel">
+          <div class="cta-icon">⚡</div>
+          <div class="cta-info">
+            <h3>Entender Laravel</h3>
+            <p>Ejemplo mínimo MVC en 5 minutos y despliegue web.</p>
+          </div>
+          <span class="cta-arrow">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Fundamentación Técnica Ejecutiva -->
+    <section class="features-grid">
+      <div class="feature-card">
+        <div class="feature-header">
+          <span class="feature-badge">Arquitectura</span>
+          <h3>¿Qué es Laravel?</h3>
+        </div>
+        <p>
+          Es un framework web de código abierto para PHP concebido bajo el patrón <strong>Modelo-Vista-Controlador (MVC)</strong>. Prioriza la productividad y sintaxis limpia, integrando de forma nativa el motor de plantillas <strong>Blade</strong>, el ORM <strong>Eloquent</strong> y la interfaz de consola <strong>Artisan</strong>.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-header">
+          <span class="feature-badge">Aplicaciones de Red</span>
+          <h3>¿Para qué se utiliza?</h3>
+        </div>
+        <p>
+          Es la plataforma estándar para construir sistemas web empresariales, plataformas SaaS y <strong>APIs RESTful desacopladas</strong>. Resuelve nativamente la autenticación segura, control de sesiones, manejo asíncrono de colas y transmisión de eventos en red.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-header">
+          <span class="feature-badge">Presencia Global</span>
+          <h3>Alcance Mundial</h3>
+        </div>
+        <p>
+          PHP respalda más del <strong>75% de los servidores web</strong> a nivel global. Dentro de su ecosistema moderno, <strong>Laravel es el framework #1 del mundo</strong> con más del <strong>40% de cuota de mercado</strong> e impulsando más de 1.6 millones de aplicaciones activas.
+        </p>
+      </div>
+    </section>
+
+    <!-- Matriz Comparativa Resumida -->
+    <section class="card">
+      <div class="card-header">
+        <h2>Matriz Comparativa de Entornos</h2>
+        <span class="tag-status">Verificación Exitosa</span>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Criterio Técnico</th>
+              <th>Entorno Windows</th>
+              <th>Entorno Linux (Pop!_OS / Ubuntu)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Runtime PHP</strong></td>
+              <td>PHP 8.5.11 (NTS extraído en <code>C:\PHP</code>)</td>
+              <td>PHP 8.5.4 (Instalado vía gestor <code>apt</code>)</td>
+            </tr>
+            <tr>
+              <td><strong>Gestor de Dependencias</strong></td>
+              <td>Composer 2.10.03 (Instalador oficial)</td>
+              <td>Composer 2.9.5 (Paquete de sistema)</td>
+            </tr>
+            <tr>
+              <td><strong>Configuración de Módulos</strong></td>
+              <td>Manual en <code>php.ini</code> (zip, fileinfo)</td>
+              <td>Automática por paquetes modulares apt</td>
+            </tr>
+            <tr>
+              <td><strong>Servidor de Desarrollo</strong></td>
+              <td>Artisan en <code>http://127.0.0.1:8000</code></td>
+              <td>Artisan en <code>http://127.0.0.1:8000</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Arquitectura MVC y Flujo de Red -->
+    <section id="mvc" class="card mvc-section">
+      <div class="card-header">
+        <h2>Arquitectura Modelo-Vista-Controlador (MVC)</h2>
+      </div>
+      <p class="mvc-intro">
+        Laravel implementa MVC para asegurar un desacoplamiento estricto entre el manejo de datos, la lógica del servidor y la interfaz que recibe el cliente a través de la red:
+      </p>
+
+      <div class="mvc-grid">
+        <div class="mvc-image-container">
+          <img src="assets/imagenes/modelo.png" alt="Esquema Modelo Vista Controlador" class="mvc-image">
+          <span class="img-caption">Flujo de petición y respuesta desacoplada en Laravel 11</span>
+        </div>
+
+        <div class="mvc-steps">
+          <div class="mvc-step-item">
+            <span class="mvc-step-bullet bullet-ctrl">C</span>
+            <div>
+              <h4>1. Controlador (Controller)</h4>
+              <p>Captura las peticiones HTTP despachadas por <code>routes/web.php</code>, procesa la entrada del cliente y coordina el flujo de información.</p>
+            </div>
+          </div>
+
+          <div class="mvc-step-item">
+            <span class="mvc-step-bullet bullet-mod">M</span>
+            <div>
+              <h4>2. Modelo (Model - Eloquent)</h4>
+              <p>Abstrae las entidades de datos y la lógica de negocio, comunicándose eficientemente con la base de datos relacional.</p>
+            </div>
+          </div>
+
+          <div class="mvc-step-item">
+            <span class="mvc-step-bullet bullet-view">V</span>
+            <div>
+              <h4>3. Vista (View - Blade)</h4>
+              <p>Compila y renderiza el código HTML dinámico con protección XSS, retornando al cliente una respuesta HTTP 200 OK.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de Página Institucional (3 Columnas) -->
+  <footer class="footer-global">
+    <div class="footer-container">
+      
+      <!-- Columna 1: Datos Académicos -->
+      <div class="footer-col">
+        <div class="footer-brand">
+          <span class="brand-unir">UNIR</span>
+          <span class="brand-sub">México</span>
+        </div>
+        <p><strong>Programa:</strong> Ingeniería en Sistemas Computacionales</p>
+        <p><strong>Asignatura:</strong> Desarrollo de Aplicaciones en Red</p>
+        <p><strong>Actividad:</strong> Actividad 2 — Tutorial de un Framework</p>
+      </div>
+
+      <!-- Columna 2: Equipo de Trabajo -->
+      <div class="footer-col">
+        <h4>Integrantes (Grupo C)</h4>
+        <ul class="team-list">
+          <li><strong>Jorge Rick</strong> (<code>jorgerickdev</code>)</li>
+          <li>Jperaltaa</li>
+          <li>Vic</li>
+          <li>Borbolla</li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Enlaces y Evidencias -->
+      <div class="footer-col">
+        <h4>Evidencias en la Nube</h4>
+        <ul class="links-list">
+          <li>
+            <a href="https://github.com/jorgerickdev/DARact2_laravel-Deployment.git" target="_blank">
+              📁 Repositorio GitHub Oficial
+            </a>
+          </li>
+          <li>
+            <a href="https://1drv.ms/v/c/1629febfca0615c7/IQD_9xCnSpC1QKDGbCEuM_AGAVuC8HP5V4nHtR4eR0awDV8?e=lPEuOG" target="_blank">
+              📹 Video Windows (OneDrive)
+            </a>
+          </li>
+          <li>
+            <a href="https://1drv.ms/v/c/1629febfca0615c7/IQBocGk3lsr3TrAUPbBGqmQiAcSrPMvQA1ScSOWaI3eCQW4?e=WlhK1Z" target="_blank">
+              📹 Video Linux (OneDrive)
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>Desarrollo de Aplicaciones en Red — Octubre 2026 | UNIR México</p>
+    </div>
+  </footer>
+
+  <script src="assets/code.js"></script>
+</body>
+</html>

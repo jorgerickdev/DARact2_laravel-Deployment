@@ -1,0 +1,32 @@
+1 estendiones vscode 
+    php extension pack               IMG01.PNG
+    Laravel Blade Snippets           imgO2.PNG 
+    Laravel extra intellisense       IMG03.PNG
+    Gitlens                          IMG04.PNG
+     
+    
+2.- iNSTALACION DE PHP
+    
+    pagina de descargas     img05.png                        http://php-net/downloads.php
+    descompresion de archivo zip en c img06.png
+    variables de entorno              img07.png
+    verificacion version php          img08.png                comando php -v          version 8.5.11
+    
+    
+3.- instalacion de composer
+     pagina de descarga               img09.png                http://getcomposer.org/download/
+     version de composer               img10.png               composer --version           version  2.10.03
+     activando zip y fileinfo          img12.png                            C:\PHP\php.ini
+      comprobando este activos            img13.png                                php -m  
+                      
+4.- instalando laravel
+     instalando laravel              img11.png                   composer global laravel/installer                         veridicando version            IMG13.PNG                      laravel --version       version  5.32.0
+     
+                           
+ 5. probando funcionamiento de laravel con demo
+      probando el demo de laravel      img15.png                laravel new demo-laravel
+       cambiando directorio            img16.png                cd demo_laravel
+       ingresando comando para activar el server   img17.png    laravel artisan serve     http://127.0.0.1:8000
+       verificando que laravel funciona      img18.png             
+                         
+     

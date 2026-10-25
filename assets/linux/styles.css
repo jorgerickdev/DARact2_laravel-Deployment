@@ -1,0 +1,355 @@
+/* ==========================================================================
+   Estilos Específicos para el Módulo Linux VM (assets/linux/styles.css)
+   UNIR México - Desarrollo de Aplicaciones en Red (DAR)
+   ========================================================================== */
+
+:root {
+  --linux-orange: #e95420;
+  --linux-dark: #c74313;
+  --linux-glow: rgba(233, 84, 32, 0.18);
+  --linux-bg-badge: rgba(233, 84, 32, 0.1);
+}
+
+/* Identidad en Navbar */
+.brand-linux {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Hero Linux */
+.hero-linux {
+  padding-bottom: 2rem;
+}
+
+.hero-os-logo {
+  max-height: 80px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(233, 84, 32, 0.3));
+}
+
+/* Reproductor de Video con Acento Linux */
+.video-card-linux {
+  background-color: var(--card-bg);
+  border: 2px solid var(--linux-orange);
+  border-radius: 14px;
+  padding: 1.8rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 24px var(--linux-glow);
+}
+
+.video-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.video-header h3 {
+  font-size: 1.3rem;
+  color: var(--unir-dark-navy);
+  margin-bottom: 0.2rem;
+}
+
+.video-header p {
+  color: var(--text-muted-dark);
+  font-size: 0.92rem;
+}
+
+.btn-cloud-linux {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--linux-orange);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 0.7rem 1.3rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(233, 84, 32, 0.25);
+}
+
+.btn-cloud-linux:hover {
+  background-color: var(--linux-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(233, 84, 32, 0.35);
+}
+
+.video-player-wrapper {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #000000;
+  border: 1px solid var(--border-color);
+}
+
+.video-player-wrapper video {
+  width: 100%;
+  max-height: 520px;
+  display: block;
+}
+
+/* Tarjetas de Pasos (Step Cards Linux) */
+.step-card-linux {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-left: 5px solid var(--linux-orange);
+  border-radius: 12px;
+  padding: 1.8rem;
+  margin-bottom: 2.2rem;
+  box-shadow: 0 4px 14px rgba(1, 152, 204, 0.06);
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.8rem;
+}
+
+.step-linux {
+  background-color: var(--linux-orange);
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(233, 84, 32, 0.35);
+}
+
+.step-header h3 {
+  font-size: 1.25rem;
+  color: var(--unir-dark-navy);
+}
+
+.step-tag-linux {
+  display: inline-block;
+  background-color: var(--linux-bg-badge);
+  color: var(--linux-orange);
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(233, 84, 32, 0.25);
+  margin-top: 0.25rem;
+}
+
+.tag-status-linux {
+  background: #ffedd5;
+  color: #c2410c;
+  border: 1px solid #fdba74;
+}
+
+.step-list, .step-ordered-list {
+  margin: 0.8rem 0 1.2rem 1.4rem;
+  color: var(--text-muted-dark);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.step-list li, .step-ordered-list li {
+  margin-bottom: 0.5rem;
+}
+
+.step-list strong, .step-ordered-list strong {
+  color: var(--text-dark);
+}
+
+/* Grillas de Imágenes y Miniaturas Nítidas */
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.4rem;
+  margin-top: 1.4rem;
+}
+
+.img-grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.img-grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.img-wrapper {
+  background-color: var(--card-inner);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.img-wrapper:hover {
+  border-color: var(--linux-orange);
+  box-shadow: 0 4px 14px var(--linux-glow);
+  transform: translateY(-2px);
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-bottom: 1px solid var(--border-color);
+  background-color: #050811;
+  cursor: zoom-in;
+  transition: opacity 0.2s ease;
+}
+
+.img-wrapper img:hover {
+  opacity: 0.92;
+}
+
+.img-caption {
+  font-size: 0.8rem;
+  color: var(--text-muted-dark);
+  padding: 0.65rem 0.8rem;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.4;
+  background-color: #ffffff;
+}
+
+/* Indicador visual de zoom */
+.img-wrapper::after {
+  content: "🔍 Clic para ampliar";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(15, 23, 42, 0.75);
+  color: #f8fafc;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.img-wrapper:hover::after {
+  opacity: 1;
+}
+
+/* Bloques de Código */
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin: 0.9rem 0;
+  overflow-x: auto;
+  font-family: ui-monospace, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9rem;
+  color: var(--code-text);
+  line-height: 1.5;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ==========================================================================
+   Visor Interactivo Lightbox (Pantalla Completa)
+   ========================================================================== */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(5, 8, 17, 0.88);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease-in-out;
+  padding: 1.5rem;
+}
+
+.lightbox-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-wrapper {
+  position: relative;
+  max-width: 92vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: zoomLightbox 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes zoomLightbox {
+  from { transform: scale(0.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.lightbox-img {
+  max-width: 92vw;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8);
+  border: 2px solid var(--linux-orange);
+  background-color: #030712;
+}
+
+.lightbox-caption {
+  margin-top: 0.9rem;
+  color: #f8fafc;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  background: rgba(15, 23, 42, 0.85);
+  padding: 0.4rem 1.2rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border-color);
+}
+
+.lightbox-hint {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  margin-top: 0.35rem;
+}
+
+.lightbox-close-btn {
+  position: absolute;
+  top: -42px;
+  right: -5px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 1;
+  transition: transform 0.15s ease, color 0.15s ease;
+}
+
+.lightbox-close-btn:hover {
+  color: var(--linux-orange);
+  transform: scale(1.15);
+}

@@ -1,63 +1,289 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitio en Construcción</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5f7fa;
-            color: #333;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container {
-            text-align: center;
-            padding: 40px;
-            max-width: 700px;
-        }
-
-        h1 {
-            color: #ff2d20;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        .badge {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #ff2d20;
-            color: white;
-            border-radius: 6px;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprovisionamiento de Laravel 11 en Linux VM | UNIR - DAR Grupo C</title>
+  <!-- Estilos Globales Compartidos -->
+  <link rel="stylesheet" href="../styles.css">
+  <!-- Estilos Específicos de Linux -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>🚧 Sitio en Construcción 🚧</h1>
 
-        <p>
-            Esta sección se encuentra actualmente en desarrollo.
-        </p>
-
-        <p>
-            Próximamente se añadirá documentación, videos, ejemplos prácticos y despliegues relacionados con Laravel.
-        </p>
-
-        <div class="badge">
-            Próxima actualización en camino
-        </div>
+  <!-- Barra de Navegación Institucional -->
+  <header class="navbar">
+    <div class="brand">
+      <img src="../imagenes/ubuntu.png" alt="Logo Ubuntu Linux" class="nav-logo">
+      <span class="brand-unir">UNIR</span>
+      <span class="brand-divider">|</span>
+      <span class="brand-linux">Linux VM</span>
+      <span class="badge-group">DAR · Grupo C</span>
     </div>
+    <nav class="nav-container">
+      <a href="../../index.html" class="nav-link">📊 Dashboard</a>
+      <a href="../windows/windows.html" class="nav-link">🪟 Windows</a>
+      <a href="linux.html" class="nav-link active">🐧 Linux</a>
+      <a href="../../index.html#mvc" class="nav-link">🚀 Arquitectura MVC</a>
+      <a href="../laravel/laravel.html" class="nav-link">🔴 Laravel</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="https://github.com/jorgerickdev/DARact2_laravel-Deployment.git" target="_blank" class="btn-github">
+        <svg height="18" width="18" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Portada / Hero de Linux -->
+    <section class="hero hero-linux">
+      <div class="hero-logo-wrapper">
+        <img src="../imagenes/ubuntu.png" alt="Logotipo de Ubuntu Linux" class="hero-os-logo">
+      </div>
+      <h1>Aprovisionamiento y Despliegue de Laravel 11 en Linux</h1>
+      <p class="hero-subtitle">
+        Procedimiento técnico paso a paso para la actualización de paquetes vía apt, instalación de PHP 8.5.4, Composer 2.9.5, configuración de variables de entorno en Zsh/Bash y ejecución del servidor Artisan verificado en Firefox.
+      </p>
+    </section>
+
+    <!-- Reproductor Multimedia Local + Respaldo en la Nube -->
+    <section class="video-container-card video-card-linux">
+      <div class="video-header">
+        <div>
+          <h3>📹 Demostración Práctica: Instalación en Linux VM</h3>
+          <p>Registro audiovisual completo del aprovisionamiento por línea de comandos en terminal de Linux.</p>
+        </div>
+        <a href="https://1drv.ms/v/c/1629febfca0615c7/IQBocGk3lsr3TrAUPbBGqmQiAcSrPMvQA1ScSOWaI3eCQW4?e=WlhK1Z" target="_blank" class="btn-cloud btn-cloud-linux">
+          ☁️ Ver / Descargar en OneDrive
+        </a>
+      </div>
+      <div class="video-player-wrapper">
+        <video controls preload="metadata">
+          <source src="videos/video_linux.mp4" type="video/mp4">
+          Tu navegador no soporta reproducción de vídeo HTML5.
+        </video>
+      </div>
+    </section>
+
+    <!-- Relatoría Técnica y Pasos de Instalación -->
+    <section class="card">
+      <div class="card-header">
+        <h2>Procedimiento Técnico de Instalación</h2>
+        <span class="tag-status tag-status-linux">Entorno Linux Pop!_OS / Ubuntu</span>
+      </div>
+
+      <!-- Fase 1: Actualización y PHP -->
+      <article class="step-card step-card-linux">
+        <div class="step-header">
+          <span class="step-num step-linux">1</span>
+          <div>
+            <h3>Fase 1: Actualización del Sistema e Instalación de PHP</h3>
+            <span class="step-tag step-tag-linux">apt update & PHP 8.5.4</span>
+          </div>
+        </div>
+        <p>
+          En distribuciones basadas en Debian/Ubuntu (Pop!_OS), se inicia sincronizando los índices de los repositorios y desplegando el runtime de PHP con las librerías de red, manipulación de cadenas y empaquetado requeridas:
+        </p>
+        <pre><code># 1. Actualización de repositorios e índices de paquetes
+sudo apt update && sudo apt upgrade -y
+
+# 2. Instalación de PHP y módulos indispensables para Laravel
+sudo apt install php curl php-cli php-mbstring php-xml php-curl php-zip unzip -y
+
+# 3. Comprobación del runtime instalado
+php -v
+# Salida verificada en terminal:
+# PHP 8.5.4 (cli) (built: Feb 2026)</code></pre>
+        <div class="img-grid img-grid-3">
+          <figure class="img-wrapper">
+            <img src="imagenes/img01_linux.png" alt="Sincronización de repositorios con sudo apt update">
+            <figcaption class="img-caption">IMG01: Actualización de índices de paquetes con sudo apt update</figcaption>
+          </figure>
+          <figure class="img-wrapper">
+            <img src="imagenes/img02_linux.png" alt="Instalación de paquetes y módulos de PHP">
+            <figcaption class="img-caption">IMG02: Despliegue de PHP, curl, unzip y extensiones vía apt</figcaption>
+          </figure>
+          <figure class="img-wrapper">
+            <img src="imagenes/img03_linux.png" alt="Verificación de versión de PHP en terminal">
+            <figcaption class="img-caption">IMG03: Comprobación exitosa de versión: PHP 8.5.4</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Fase 2: Composer -->
+      <article class="step-card step-card-linux">
+        <div class="step-header">
+          <span class="step-num step-linux">2</span>
+          <div>
+            <h3>Fase 2: Instalación y Verificación de Composer</h3>
+            <span class="step-tag step-tag-linux">Composer 2.9.5</span>
+          </div>
+        </div>
+        <p>
+          Se instala el gestor de dependencias estándar de la comunidad PHP directamente desde los repositorios del sistema operativo:
+        </p>
+        <pre><code># Instalación del gestor de dependencias
+sudo apt install composer -y
+
+# Validación de versión del gestor
+composer -v
+# Salida verificada: Composer version 2.9.5</code></pre>
+        <div class="img-grid">
+          <figure class="img-wrapper">
+            <img src="imagenes/img04_linux.png" alt="Instalación de Composer mediante apt">
+            <figcaption class="img-caption">IMG04: Descarga e instalación de Composer con apt</figcaption>
+          </figure>
+          <figure class="img-wrapper">
+            <img src="imagenes/img05_linux.png" alt="Comprobación de versión de Composer en terminal">
+            <figcaption class="img-caption">IMG05: Verificación exitosa del comando composer -v (v2.9.5)</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Fase 3: Laravel CLI y PATH en Shell -->
+      <article class="step-card step-card-linux">
+        <div class="step-header">
+          <span class="step-num step-linux">3</span>
+          <div>
+            <h3>Fase 3: Instalación Global de Laravel y Configuración de PATH</h3>
+            <span class="step-tag step-tag-linux">Laravel Installer 5.32.0 & ~/.zshrc</span>
+          </div>
+        </div>
+        <p>
+          Se descarga el instalador de Laravel de forma global. Para que el binario sea ejecutable desde cualquier ubicación de la terminal, se inyecta su ruta en el archivo de configuración del shell (<strong>Zsh</strong> en Pop!_OS o <strong>Bash</strong>):
+        </p>
+        <pre><code># 1. Instalación global del instalador de Laravel
+composer global require laravel/installer
+
+# 2. Agregar binarios globales de Composer a la variable PATH
+export PATH="$HOME/.config/composer/vendor/bin:$PATH"
+
+# 3. Guardar en el perfil de la shell y recargar
+echo 'export PATH="$HOME/.config/composer/vendor/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+
+# 4. Validar versión del instalador
+laravel --version
+# Salida verificada: Laravel Installer 5.32.0</code></pre>
+        <div class="img-grid">
+          <figure class="img-wrapper">
+            <img src="imagenes/img06_linux.png" alt="Instalación global de Laravel Installer">
+            <figcaption class="img-caption">IMG06: Ejecución de composer global require laravel/installer</figcaption>
+          </figure>
+          <figure class="img-wrapper">
+            <img src="imagenes/img07_linux.png" alt="Configuración de PATH en shell y comprobación de versión">
+            <figcaption class="img-caption">IMG07: Exportación de PATH en ~/.zshrc y comprobación de versión 5.32.0</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Fase 4: Proyecto Demo y Servidor Artisan -->
+      <article class="step-card step-card-linux">
+        <div class="step-header">
+          <span class="step-num step-linux">4</span>
+          <div>
+            <h3>Fase 4: Inicialización del Proyecto Demo y Servidor de Desarrollo</h3>
+            <span class="step-tag step-tag-linux">Artisan & Firefox en http://127.0.0.1:8000</span>
+          </div>
+        </div>
+        <p>
+          Se genera la aplicación base mediante el CLI, se cambia al directorio de trabajo y se enciende el servidor web local con Artisan:
+        </p>
+        <pre><code># 1. Creación de la aplicación demo
+laravel new demo-laravel
+
+# 2. Navegar al directorio generado
+cd demo-laravel
+
+# 3. Iniciar el servidor local de desarrollo
+php artisan serve
+# Server running on [http://127.0.0.1:8000]
+
+# 4. Para finalizar la ejecución:
+# Presionar Ctrl + C en la terminal activa</code></pre>
+        <div class="img-grid img-grid-4">
+          <figure class="img-wrapper">
+            <img src="imagenes/img10_linux.png" alt="Creación del proyecto con laravel new demo-laravel">
+            <figcaption class="img-caption">IMG10: Creación de la aplicación base con laravel new demo-laravel</figcaption>
+          </figure>
+          <figure class="img-wrapper">
+            <img src="imagenes/img12_linux.png" alt="Navegación al directorio y php artisan serve">
+            <figcaption class="img-caption">IMG12: Ejecución del comando php artisan serve en el puerto 8000</figcaption>
+          </figure>
+          <figure class="img-wrapper">
+            <img src="imagenes/img13_linux.png" alt="Pantalla de bienvenida de Laravel 11 activa en Firefox">
+            <figcaption class="img-caption">IMG13: Verificación exitosa en Firefox en http://127.0.0.1:8000</figcaption>
+          </figure>
+          <figure class="img-wrapper">
+            <img src="imagenes/img14_linux.png" alt="Cierre del servidor con Ctrl + C en terminal">
+            <figcaption class="img-caption">IMG14: Detención limpia del servicio de red con Ctrl + C</figcaption>
+          </figure>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- Pie de Página Institucional (3 Columnas) -->
+  <footer class="footer-global">
+    <div class="footer-container">
+      
+      <!-- Columna 1: Datos Académicos -->
+      <div class="footer-col">
+        <div class="footer-brand">
+          <span class="brand-unir">UNIR</span>
+          <span class="brand-sub">México</span>
+        </div>
+        <p><strong>Programa:</strong> Ingeniería en Sistemas Computacionales</p>
+        <p><strong>Asignatura:</strong> Desarrollo de Aplicaciones en Red</p>
+        <p><strong>Actividad:</strong> Actividad 2 — Tutorial de un Framework</p>
+      </div>
+
+      <!-- Columna 2: Equipo de Trabajo -->
+      <div class="footer-col">
+        <h4>Integrantes (Grupo C)</h4>
+        <ul class="team-list">
+          <li><strong>Jorge Rick</strong> (<code>jorgerickdev</code>)</li>
+          <li>Jperaltaa</li>
+          <li>Vic</li>
+          <li>Borbolla</li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Enlaces y Evidencias -->
+      <div class="footer-col">
+        <h4>Evidencias en la Nube</h4>
+        <ul class="links-list">
+          <li>
+            <a href="https://github.com/jorgerickdev/DARact2_laravel-Deployment.git" target="_blank">
+              📁 Repositorio GitHub Oficial
+            </a>
+          </li>
+          <li>
+            <a href="https://1drv.ms/v/c/1629febfca0615c7/IQD_9xCnSpC1QKDGbCEuM_AGAVuC8HP5V4nHtR4eR0awDV8?e=lPEuOG" target="_blank">
+              📹 Video Windows (OneDrive)
+            </a>
+          </li>
+          <li>
+            <a href="https://1drv.ms/v/c/1629febfca0615c7/IQBocGk3lsr3TrAUPbBGqmQiAcSrPMvQA1ScSOWaI3eCQW4?e=WlhK1Z" target="_blank">
+              📹 Video Linux (OneDrive)
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>Desarrollo de Aplicaciones en Red — Octubre 2026 | UNIR México</p>
+    </div>
+  </footer>
+
+  <script src="code.js"></script>
 </body>
 </html>

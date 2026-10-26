@@ -1,63 +1,304 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitio en Construcción</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5f7fa;
-            color: #333;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container {
-            text-align: center;
-            padding: 40px;
-            max-width: 700px;
-        }
-
-        h1 {
-            color: #ff2d20;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        .badge {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #ff2d20;
-            color: white;
-            border-radius: 6px;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprovisionamiento de Laravel 11 en Windows 11 | UNIR - DAR Grupo C</title>
+  <!-- Estilos Globales Compartidos -->
+  <link rel="stylesheet" href="../styles.css">
+  <!-- Estilos Específicos de Windows 11 -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>🚧 Sitio en Construcción 🚧</h1>
 
-        <p>
-            Esta sección se encuentra actualmente en desarrollo.
-        </p>
-
-        <p>
-            Próximamente se añadirá documentación, videos, ejemplos prácticos y despliegues relacionados con Laravel.
-        </p>
-
-        <div class="badge">
-            Próxima actualización en camino
-        </div>
+  <!-- Barra de Navegación Institucional -->
+  <header class="navbar">
+    <div class="brand">
+      <img src="../imagenes/windows.png" alt="Logo Windows 11" class="nav-logo">
+      <span class="brand-unir">UNIR</span>
+      <span class="brand-divider">|</span>
+      <span class="brand-win">Windows 11</span>
+      <span class="badge-group">DAR · Grupo C</span>
     </div>
+    <nav class="nav-container">
+      <a href="../../index.html" class="nav-link">📊 Dashboard</a>
+      <a href="windows.html" class="nav-link active">🪟 Windows</a>
+      <a href="../linux/linux.html" class="nav-link">🐧 Linux</a>
+      <a href="../../index.html#mvc" class="nav-link">🚀 Arquitectura MVC</a>
+      <a href="../laravel/laravel.html" class="nav-link">🔴 Laravel</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="https://github.com/jorgerickdev/DARact2_laravel-Deployment.git" target="_blank" class="btn-github">
+        <svg height="18" width="18" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        <span>GitHub</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Portada / Hero de Windows 11 -->
+    <section class="hero hero-win">
+      <div class="hero-logo-wrapper">
+        <img src="../imagenes/windows.png" alt="Logotipo de Windows 11" class="hero-os-logo">
+      </div>
+      <h1>Aprovisionamiento y Despliegue de Laravel 11 en Windows 11</h1>
+      <p class="hero-subtitle">
+        Procedimiento técnico paso a paso para la configuración del runtime de PHP 8.5.11 NTS, registro en PATH, habilitación de extensiones en php.ini, gestor Composer 2.10.03 y ejecución del servidor local Artisan.
+      </p>
+    </section>
+
+    <!-- Reproductor Multimedia Local + Respaldo en la Nube -->
+    <section class="video-container-card">
+      <div class="video-header">
+        <div>
+          <h3>📹 Demostración Práctica: Instalación en Windows 11</h3>
+          <p>Registro audiovisual completo de la configuración y ejecución de comandos en el sistema.</p>
+        </div>
+        <a href="https://1drv.ms/v/c/1629febfca0615c7/IQD_9xCnSpC1QKDGbCEuM_AGAVuC8HP5V4nHtR4eR0awDV8?e=lPEuOG" target="_blank" class="btn-cloud btn-cloud-win">
+          ☁️ Ver / Descargar en OneDrive
+        </a>
+      </div>
+      <div class="video-player-wrapper">
+        <video controls preload="metadata">
+          <source src="videos/video_windows.mp4" type="video/mp4">
+          Tu navegador no soporta reproducción de vídeo HTML5.
+        </video>
+      </div>
+    </section>
+
+    <!-- Relatoría Técnica y Pasos de Instalación -->
+    <section class="card">
+      <div class="card-header">
+        <h2>Procedimiento Técnico de Instalación</h2>
+        <span class="tag-status">Entorno Windows 11</span>
+      </div>
+
+      <!-- Fase 1: VS Code -->
+      <article class="step-card">
+        <div class="step-header">
+          <span class="step-num step-win">1</span>
+          <div>
+            <h3>Fase 1: Preparación del Entorno de Desarrollo (VS Code)</h3>
+            <span class="step-tag">Extensiones de Ecosistema</span>
+          </div>
+        </div>
+        <p>
+          Antes de incorporar los binarios del backend, se acondiciona <strong>Visual Studio Code</strong> integrando las herramientas que garantizan la introspección sintáctica, el formateo y la trazabilidad del código:
+        </p>
+        <ul class="step-list">
+          <li><strong>PHP Extension Pack:</strong> Proporciona soporte integral para PHP, incluyendo linting, validación sintáctica y depuración.</li>
+          <li><strong>Laravel Blade Snippets:</strong> Habilita el coloreado de sintaxis y atajos automáticos para las directivas del motor de plantillas Blade.</li>
+          <li><strong>Laravel Extra Intellisense:</strong> Autocompletado contextual avanzado para rutas, vistas, modelos de Eloquent y archivos de configuración.</li>
+          <li><strong>GitLens:</strong> Integración profunda con Git para auditar la autoría de líneas y el historial de commits.</li>
+        </ul>
+        <div class="img-grid">
+          <figure class="img-wrapper">
+            <img src="imagenes/img01.png" alt="Extensiones esenciales instaladas en Visual Studio Code">
+            <figcaption class="img-caption">IMG01: Paquete de extensiones para desarrollo en PHP y Laravel en VS Code</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Fase 2: PHP -->
+      <article class="step-card">
+        <div class="step-header">
+          <span class="step-num step-win">2</span>
+          <div>
+            <h3>Fase 2: Instalación de Librerías Base y Runtime de PHP</h3>
+            <span class="step-tag">PHP 8.5.11 NTS & PATH</span>
+          </div>
+        </div>
+        <p>
+          Para que el binario de PHP se ejecute de manera nativa en el sistema operativo Windows, se orquestan los siguientes pasos fundamentales:
+        </p>
+        <ol class="step-ordered-list">
+          <li><strong>Visual C++ Redistributable:</strong> Se descarga e instala el paquete redistribuible oficial de Microsoft (<code>vc_redist.x64.exe</code>) para asegurar la compatibilidad con las librerías dinámicas de C++.</li>
+          <li><strong>Descarga de PHP:</strong> Desde el portal oficial (<code>php.net/downloads.php</code>), se obtiene el archivo ZIP de la versión <em>Non-Thread Safe (NTS)</em> para 64 bits.</li>
+          <li><strong>Descompresión en Disco Local:</strong> Se extraen los binarios directamente en la raíz del sistema en la carpeta <code>C:\PHP</code>.</li>
+          <li><strong>Variables de Entorno del Sistema (PATH):</strong> Se accede a <em>Propiedades del Sistema &gt; Variables de Entorno</em>, se edita la variable del sistema <code>Path</code> y se agrega la ruta absoluta <code>C:\PHP</code>.</li>
+        </ol>
+        <p>Se abre una consola de terminal (PowerShell / CMD) para comprobar la disponibilidad global del intérprete:</p>
+        <pre><code>php -v
+# Salida verificada en terminal:
+# PHP 8.5.11 (cli) (built: Feb 2026) ( NTS Visual C++ 2022 x64 )</code></pre>
+        <div class="img-grid img-grid-4">
+          <figure class="img-wrapper">
+            <img src="imagenes/img05.png" alt="Portal oficial de descargas de PHP">
+            <figcaption class="img-caption">IMG05: Portal oficial de descargas en php.net</figcaption>
+          </figure>
+          <figure class="img-wrapper">
+            <img src="imagenes/img06.png" alt="Descompresión del archivo ZIP en C:\PHP">
+            <figcaption class="img-caption">IMG06: Extracción limpia de binarios en C:\PHP</figcaption>
+          </figure>
+          <figure class="img-wrapper">
+            <img src="imagenes/img07.png" alt="Configuración de la variable de entorno PATH">
+            <figcaption class="img-caption">IMG07: Registro de C:\PHP en la variable de entorno PATH</figcaption>
+          </figure>
+          <figure class="img-wrapper">
+            <img src="imagenes/img08.png" alt="Comprobación de versión PHP 8.5.11 en terminal">
+            <figcaption class="img-caption">IMG08: Verificación exitosa del comando php -v (v8.5.11)</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Fase 3: Composer y php.ini -->
+      <article class="step-card">
+        <div class="step-header">
+          <span class="step-num step-win">3</span>
+          <div>
+            <h3>Fase 3: Instalación de Composer y Activación de Módulos (php.ini)</h3>
+            <span class="step-tag">Composer 2.10.03 & Extensiones</span>
+          </div>
+        </div>
+        <p>
+          <strong>Composer</strong> actúa como el gestor de paquetes a nivel de aplicación indispensable para resolver el árbol de dependencias de Laravel:
+        </p>
+        <ol class="step-ordered-list">
+          <li><strong>Instalador Oficial:</strong> Se descarga <code>Composer-Setup.exe</code> desde <code>getcomposer.org/download/</code> y se ejecuta, verificando que reconozca automáticamente la ruta de <code>C:\PHP\php.exe</code>.</li>
+          <li><strong>Acondicionamiento de php.ini:</strong> En la carpeta <code>C:\PHP</code>, se edita el archivo <code>php.ini</code> para habilitar los módulos requeridos por Composer y Laravel, removiendo el punto y coma (<code>;</code>) inicial:
+            <pre><code>extension=fileinfo
+extension=zip</code></pre>
+          </li>
+          <li><strong>Verificación de Gestor y Módulos:</strong> En una nueva terminal, se ejecutan las validaciones:</li>
+        </ol>
+        <pre><code>composer --version
+# Salida verificada: Composer version 2.10.03
+
+php -m
+# Se valida la presencia de 'fileinfo' y 'zip' en la lista de módulos cargados</code></pre>
+        <div class="img-grid">
+          <figure class="img-wrapper">
+            <img src="imagenes/img09.png" alt="Página de descarga de Composer">
+            <figcaption class="img-caption">IMG09: Portal oficial de descarga de Composer</figcaption>
+          </figure>
+          <figure class="img-wrapper">
+            <img src="imagenes/img12.png" alt="Habilitación de extensiones en php.ini">
+            <figcaption class="img-caption">IMG12: Activación de extensiones zip y fileinfo en C:\PHP\php.ini</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Fase 4: Laravel CLI -->
+      <article class="step-card">
+        <div class="step-header">
+          <span class="step-num step-win">4</span>
+          <div>
+            <h3>Fase 4: Instalación Global de Laravel CLI</h3>
+            <span class="step-tag">Laravel Installer 5.32.0</span>
+          </div>
+        </div>
+        <p>
+          Se instala el cliente de línea de comandos de Laravel de forma global a través de Composer, permitiendo la generación de proyectos con el comando <code>laravel new</code>:
+        </p>
+        <pre><code>composer global require laravel/installer
+laravel --version
+# Salida verificada en terminal: Laravel Installer 5.32.0</code></pre>
+        <div class="img-grid">
+          <figure class="img-wrapper">
+            <img src="imagenes/img11.png" alt="Instalación global de Laravel Installer">
+            <figcaption class="img-caption">IMG11: Ejecución del comando composer global require laravel/installer</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Fase 5: Demo y Verificación -->
+      <article class="step-card">
+        <div class="step-header">
+          <span class="step-num step-win">5</span>
+          <div>
+            <h3>Fase 5: Inicialización del Proyecto Demo y Servidor de Desarrollo</h3>
+            <span class="step-tag">Artisan & http://127.0.0.1:8000</span>
+          </div>
+        </div>
+        <p>
+          Se genera la aplicación de red de prueba y se despliega el servidor HTTP local mediante Artisan:
+        </p>
+        <pre><code># 1. Crear nuevo proyecto
+laravel new demo-laravel
+
+# 2. Navegar al directorio generado
+cd demo_laravel
+
+# 3. Arrancar el servidor de desarrollo
+php artisan serve
+# Server running on [http://127.0.0.1:8000]</code></pre>
+        <p>
+          Al ingresar a <code>http://127.0.0.1:8000</code> en el navegador web, se despliega la interfaz de bienvenida de <strong>Laravel 11</strong>, confirmando la resolución de peticiones HTTP en Windows:
+        </p>
+        <div class="img-grid">
+          <figure class="img-wrapper">
+            <img src="imagenes/img15.png" alt="Creación del proyecto demo-laravel">
+            <figcaption class="img-caption">IMG15: Inicialización del proyecto con laravel new demo-laravel</figcaption>
+          </figure>
+          <figure class="img-wrapper">
+            <img src="imagenes/img18.png" alt="Pantalla de bienvenida de Laravel en navegador">
+            <figcaption class="img-caption">IMG18: Comprobación exitosa en navegador en http://127.0.0.1:8000</figcaption>
+          </figure>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <!-- Pie de Página Institucional (3 Columnas) -->
+  <footer class="footer-global">
+    <div class="footer-container">
+      
+      <!-- Columna 1: Datos Académicos -->
+      <div class="footer-col">
+        <div class="footer-brand">
+          <span class="brand-unir">UNIR</span>
+          <span class="brand-sub">México</span>
+        </div>
+        <p><strong>Programa:</strong> Ingeniería en Sistemas Computacionales</p>
+        <p><strong>Asignatura:</strong> Desarrollo de Aplicaciones en Red</p>
+        <p><strong>Actividad:</strong> Actividad 2 — Tutorial de un Framework</p>
+      </div>
+
+      <!-- Columna 2: Equipo de Trabajo -->
+      <div class="footer-col">
+        <h4>Integrantes (Grupo C)</h4>
+        <ul class="team-list">
+          <li><strong>Jorge Rick</strong> (<code>jorgerickdev</code>)</li>
+          <li>Jperaltaa</li>
+          <li>Vic</li>
+          <li>Borbolla</li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Enlaces y Evidencias -->
+      <div class="footer-col">
+        <h4>Evidencias en la Nube</h4>
+        <ul class="links-list">
+          <li>
+            <a href="https://github.com/jorgerickdev/DARact2_laravel-Deployment.git" target="_blank">
+              📁 Repositorio GitHub Oficial
+            </a>
+          </li>
+          <li>
+            <a href="https://1drv.ms/v/c/1629febfca0615c7/IQD_9xCnSpC1QKDGbCEuM_AGAVuC8HP5V4nHtR4eR0awDV8?e=lPEuOG" target="_blank">
+              📹 Video Windows (OneDrive)
+            </a>
+          </li>
+          <li>
+            <a href="https://1drv.ms/v/c/1629febfca0615c7/IQBocGk3lsr3TrAUPbBGqmQiAcSrPMvQA1ScSOWaI3eCQW4?e=WlhK1Z" target="_blank">
+              📹 Video Linux (OneDrive)
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>Desarrollo de Aplicaciones en Red — Octubre 2026 | UNIR México</p>
+    </div>
+  </footer>
+
+  <script src="code.js"></script>
 </body>
 </html>

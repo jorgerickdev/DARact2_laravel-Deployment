@@ -1,0 +1,364 @@
+/* ==========================================================================
+   Estilos Específicos para el Módulo Windows 11 (assets/windows/styles.css)
+   UNIR México - Desarrollo de Aplicaciones en Red (DAR)
+   ========================================================================== */
+
+:root {
+  --win-blue: #0078d4;
+  --win-dark: #005a9e;
+  --win-glow: rgba(0, 120, 212, 0.18);
+  --win-bg-badge: rgba(0, 120, 212, 0.1);
+}
+
+/* Identidad en Navbar */
+.brand-win {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Hero Windows */
+.hero-win {
+  padding-bottom: 2rem;
+}
+
+.hero-os-logo {
+  max-height: 80px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 10px rgba(0, 120, 212, 0.3));
+}
+
+/* Reproductor de Video con Acento Windows */
+.video-container-card {
+  background-color: var(--card-bg);
+  border: 2px solid var(--win-blue);
+  border-radius: 14px;
+  padding: 1.8rem;
+  margin-bottom: 2.5rem;
+  box-shadow: 0 8px 24px var(--win-glow);
+}
+
+.video-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.video-header h3 {
+  font-size: 1.3rem;
+  color: var(--unir-dark-navy);
+  margin-bottom: 0.2rem;
+}
+
+.video-header p {
+  color: var(--text-muted-dark);
+  font-size: 0.92rem;
+}
+
+.btn-cloud-win {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--win-blue);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 0.7rem 1.3rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 120, 212, 0.25);
+}
+
+.btn-cloud-win:hover {
+  background-color: var(--win-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 120, 212, 0.35);
+}
+
+.video-player-wrapper {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #000000;
+  border: 1px solid var(--border-color);
+}
+
+.video-player-wrapper video {
+  width: 100%;
+  max-height: 520px;
+  display: block;
+}
+
+/* Tarjetas de Pasos (Step Cards) */
+.step-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-left: 5px solid var(--win-blue);
+  border-radius: 12px;
+  padding: 1.8rem;
+  margin-bottom: 2.2rem;
+  box-shadow: 0 4px 14px rgba(1, 152, 204, 0.06);
+}
+
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.8rem;
+}
+
+.step-win {
+  background-color: var(--win-blue);
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.05rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 120, 212, 0.35);
+}
+
+.step-header h3 {
+  font-size: 1.25rem;
+  color: var(--unir-dark-navy);
+}
+
+.step-tag {
+  display: inline-block;
+  background-color: var(--win-bg-badge);
+  color: var(--win-blue);
+  font-size: 0.76rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 120, 212, 0.25);
+  margin-top: 0.25rem;
+}
+
+.step-list, .step-ordered-list {
+  margin: 0.8rem 0 1.2rem 1.4rem;
+  color: var(--text-muted-dark);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.step-list li, .step-ordered-list li {
+  margin-bottom: 0.5rem;
+}
+
+.step-list strong, .step-ordered-list strong {
+  color: var(--text-dark);
+}
+
+/* Grillas de Imágenes y Miniaturas Nítidas */
+.img-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.4rem;
+  margin-top: 1.4rem;
+}
+
+.img-grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.img-wrapper {
+  background-color: #0b1120;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.25s ease;
+  position: relative;
+  cursor: zoom-in;
+}
+
+.img-wrapper:hover {
+  border-color: var(--win-blue);
+  box-shadow: 0 6px 20px rgba(0, 120, 212, 0.28);
+  transform: translateY(-2px);
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain; /* ¡Sin recortes ni distorsión! */
+  padding: 0.35rem;
+  background-color: #050811;
+  border-bottom: 1px solid var(--border-color);
+  cursor: zoom-in;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.img-wrapper:hover img {
+  transform: scale(1.02);
+  filter: brightness(1.08);
+}
+
+.img-caption {
+  font-size: 0.82rem;
+  color: var(--text-muted-dark);
+  padding: 0.7rem 0.85rem;
+  text-align: center;
+  font-weight: 600;
+  line-height: 1.4;
+  background-color: #ffffff;
+}
+
+.img-wrapper::after {
+  content: "🔍 Clic para ampliar";
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(12, 35, 64, 0.85);
+  color: #38bdf8;
+  border: 1px solid rgba(1, 152, 204, 0.4);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 9999px;
+  pointer-events: none;
+  opacity: 0.85;
+  transition: all 0.2s ease;
+}
+
+.img-wrapper:hover::after {
+  opacity: 1;
+  background: var(--win-blue);
+  color: #ffffff;
+}
+
+/* Bloques de Código */
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 1rem 1.2rem;
+  margin: 0.9rem 0;
+  overflow-x: auto;
+  font-family: ui-monospace, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9rem;
+  color: var(--code-text);
+  line-height: 1.5;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+
+/* ==========================================================================
+   Visor Interactivo Lightbox (Modal Pantalla Completa)
+   ========================================================================== */
+.lightbox-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(6, 11, 22, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 99999;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  animation: lightboxFadeIn 0.2s ease-out;
+}
+
+.lightbox-overlay.active {
+  display: flex;
+}
+
+.lightbox-wrapper {
+  position: relative;
+  max-width: 95vw;
+  max-height: 86vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: lightboxScaleUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lightbox-img {
+  max-width: 92vw;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 2px solid var(--win-blue);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.85), 0 0 25px rgba(0, 120, 212, 0.4);
+  background-color: #030712;
+}
+
+.lightbox-caption {
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  text-align: center;
+  max-width: 850px;
+  background: rgba(12, 35, 64, 0.85);
+  border: 1px solid rgba(1, 152, 204, 0.3);
+  padding: 0.5rem 1.4rem;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.lightbox-close-btn {
+  position: absolute;
+  top: -45px;
+  right: -10px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: #ffffff;
+  font-size: 1.6rem;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.lightbox-close-btn:hover {
+  background-color: var(--laravel-red);
+  border-color: var(--laravel-red);
+  transform: scale(1.1);
+}
+
+.lightbox-hint {
+  color: #94a3b8;
+  font-size: 0.78rem;
+  margin-top: 0.5rem;
+}
+
+@keyframes lightboxFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes lightboxScaleUp {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}

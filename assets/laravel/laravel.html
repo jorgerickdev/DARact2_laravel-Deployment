@@ -1,63 +1,586 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitio en Construcción</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5f7fa;
-            color: #333;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container {
-            text-align: center;
-            padding: 40px;
-            max-width: 700px;
-        }
-
-        h1 {
-            color: #ff2d20;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-
-        .badge {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #ff2d20;
-            color: white;
-            border-radius: 6px;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Despliegue de Laravel 11 con Docker y Render | UNIR - DAR Grupo C</title>
+  <!-- Estilos Globales Compartidos -->
+  <link rel="stylesheet" href="../styles.css">
+  <!-- Estilos Específicos del Módulo Laravel & Cloud -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>🚧 Sitio en Construcción 🚧</h1>
 
-        <p>
-            Esta sección se encuentra actualmente en desarrollo.
-        </p>
-
-        <p>
-            Próximamente se añadirá documentación, videos, ejemplos prácticos y despliegues relacionados con Laravel.
-        </p>
-
-        <div class="badge">
-            Próxima actualización en camino
-        </div>
+  <!-- Barra de Navegación Institucional Global -->
+  <header class="navbar">
+    <div class="brand">
+      <img src="../imagenes/logo_laravel.png" alt="Logo Laravel" class="nav-logo" onerror="this.style.display='none'">
+      <span class="brand-unir">UNIR</span>
+      <span class="brand-divider">|</span>
+      <span class="brand-laravel">Laravel & Docker</span>
+      <span class="badge-group">DAR · Grupo C</span>
     </div>
+    <nav class="nav-container">
+      <a href="../../index.html" class="nav-link">📊 Dashboard</a>
+      <a href="../windows/windows.html" class="nav-link">🪟 Windows</a>
+      <a href="../linux/linux.html" class="nav-link">🐧 Linux</a>
+      <a href="../../index.html#mvc" class="nav-link">🚀 Arquitectura MVC</a>
+      <a href="laravel.html" class="nav-link active">🔴 Despliegue Laravel</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="https://github.com/jorgerickdev/hola-laravel" target="_blank" class="btn-github btn-github-docker" title="Repositorio de la Aplicación en GitHub">
+        <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        <span>🐳 Repo App</span>
+      </a>
+      <a href="https://github.com/jorgerickdev/DARact2_laravel-Deployment" target="_blank" class="btn-github" title="Repositorio del Sitio de Documentación">
+        <svg height="16" width="16" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        <span>📁 Repo Web</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Hero / Portada Principal -->
+    <section class="hero hero-laravel">
+      <div class="hero-badge-row">
+        <span class="badge badge-docker">🐳 Docker Engine</span>
+        <span class="badge badge-laravel">⚡ Laravel 11 / PHP 8.4</span>
+        <span class="badge badge-render">☁️ Render PaaS Live</span>
+        <span class="badge badge-live"><span class="pulse-dot"></span> 200 OK Activo</span>
+      </div>
+      <h1>Despliegue de Laravel con Docker y Publicación Cloud en Render</h1>
+      <p class="hero-subtitle">
+        Procedimiento de ingeniería para contenerizar un entorno limpio de desarrollo local con Docker Compose, gestionar el ciclo de control de versiones con Git/GitHub, resolver incidencias de contexto de compilación y desplegar el servicio web en alta disponibilidad en la nube de Render.
+      </p>
+
+      <!-- Botones de Acción Inmediata (CTA) -->
+      <div class="hero-actions-grid">
+        <a href="https://hola-laravel.onrender.com" target="_blank" class="cta-btn cta-btn-render">
+          <span class="cta-icon">🌍</span>
+          <div class="cta-text">
+            <strong>Visitar Aplicación en Producción</strong>
+            <small>https://hola-laravel.onrender.com</small>
+          </div>
+          <span class="cta-arrow">→</span>
+        </a>
+
+        <a href="#video-section" class="cta-btn cta-btn-video">
+          <span class="cta-icon">📹</span>
+          <div class="cta-text">
+            <strong>Ver Video Tutorial Completo</strong>
+            <small>Demostración práctica en OneDrive / Drive</small>
+          </div>
+          <span class="cta-arrow">↓</span>
+        </a>
+
+        <a href="https://github.com/jorgerickdev/hola-laravel" target="_blank" class="cta-btn cta-btn-git">
+          <span class="cta-icon">🐙</span>
+          <div class="cta-text">
+            <strong>Explorar Código en GitHub</strong>
+            <small>Dockerfile, docker-compose.yml y src/</small>
+          </div>
+          <span class="cta-arrow">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Reproductor Multimedia y Respaldos en la Nube -->
+    <section id="video-section" class="video-container-card">
+      <div class="video-header">
+        <div>
+          <h3>📹 Demostración Práctica: Contenedorización y Despliegue en Render</h3>
+          <p>Registro audiovisual completo: puesta en marcha de Docker local, commit en Git y aprovisionamiento del Web Service en Render.</p>
+        </div>
+        <div class="video-badges-actions">
+          <a href="https://1drv.ms/v/c/1629febfca0615c7/IQDMNj4BLqM3QJ90HHEnIODvAU_-VzFraaE0atP-KJ5CDhY?e=JnxJmZ" target="_blank" class="btn-cloud btn-cloud-onedrive">
+            ☁️ Ver en OneDrive
+          </a>
+          <a href="https://drive.google.com/file/d/1p2APaUTHZzPZKgGGRocLRFYxesdJd89o/view?usp=sharing" target="_blank" class="btn-cloud btn-cloud-drive">
+            📂 Respaldo en Google Drive
+          </a>
+        </div>
+      </div>
+      <div class="video-player-wrapper">
+        <div class="video-embed-card">
+          <div class="video-mockup-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="video-title-bar">Tutorial: Docker + Laravel + GitHub + Render (Duración: 15+ min)</span>
+          </div>
+          <div class="video-cta-banner">
+            <div class="banner-icon">🎬</div>
+            <div class="banner-info">
+              <h4>Reproducción Disponible en la Nube de Alta Velocidad</h4>
+              <p>Para evitar almacenar archivos de video de gran tamaño dentro del repositorio Git, la evidencia se transmite directamente en streaming con soporte multi-dispositivo:</p>
+              <div class="banner-links">
+                <a href="https://1drv.ms/v/c/1629febfca0615c7/IQDMNj4BLqM3QJ90HHEnIODvAU_-VzFraaE0atP-KJ5CDhY?e=JnxJmZ" target="_blank" class="btn-play-primary">
+                  ▶ Reproducir Video Oficial (OneDrive)
+                </a>
+                <a href="https://drive.google.com/file/d/1p2APaUTHZzPZKgGGRocLRFYxesdJd89o/view?usp=sharing" target="_blank" class="btn-play-secondary">
+                  📁 Reproducir Espejo (Google Drive)
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Arquitectura de Red y Pipeline DevOps -->
+    <section class="card">
+      <div class="card-header">
+        <h2>Arquitectura de Red y Flujo DevOps</h2>
+        <span class="tag-status">Pipeline Multi-Fase</span>
+      </div>
+      <p class="section-lead">
+        El proyecto <strong>Hola-Laravel</strong> implementa una infraestructura desacoplada y moderna que garantiza paridad total entre el entorno de desarrollo y el de producción mediante contenedores inmutables:
+      </p>
+
+      <!-- Diagrama de Flujo -->
+      <div class="pipeline-container">
+        <div class="pipeline-step">
+          <div class="step-icon">💻</div>
+          <div class="step-label">Equipo Local</div>
+          <div class="step-sub">Desarrollo aislado</div>
+        </div>
+        <div class="pipeline-arrow">➔</div>
+        <div class="pipeline-step step-docker">
+          <div class="step-icon">🐳</div>
+          <div class="step-label">Docker Compose</div>
+          <div class="step-sub">php:8.4-cli en /app</div>
+        </div>
+        <div class="pipeline-arrow">➔</div>
+        <div class="pipeline-step step-laravel">
+          <div class="step-icon">⚡</div>
+          <div class="step-label">Laravel 11</div>
+          <div class="step-sub">Motor MVC & Artisan</div>
+        </div>
+        <div class="pipeline-arrow">➔</div>
+        <div class="pipeline-step step-git">
+          <div class="step-icon">🐙</div>
+          <div class="step-label">Git / GitHub</div>
+          <div class="step-sub">Control de versiones</div>
+        </div>
+        <div class="pipeline-arrow">➔</div>
+        <div class="pipeline-step step-render">
+          <div class="step-icon">☁️</div>
+          <div class="step-label">Render Cloud</div>
+          <div class="step-sub">PaaS Build Context</div>
+        </div>
+        <div class="pipeline-arrow">➔</div>
+        <div class="pipeline-step step-live">
+          <div class="step-icon">🌍</div>
+          <div class="step-label">Internet</div>
+          <div class="step-sub">Servicio 200 OK</div>
+        </div>
+      </div>
+
+      <!-- Jerarquía de Archivos -->
+      <div class="tree-box">
+        <div class="tree-header">
+          <span>📁 Estructura del Repositorio (`jorgerickdev/hola-laravel`)</span>
+          <span class="badge badge-info">Contexto Desacoplado</span>
+        </div>
+        <pre class="tree-code"><code>Hola-Laravel/
+├── README.md               <span class="code-comment"># Documentación general del repositorio</span>
+├── docker-compose.yml      <span class="code-comment"># Orquestador del servicio para entorno local</span>
+└── src/                    <span class="code-comment"># Build Context: Código fuente y configuración de producción</span>
+    ├── Dockerfile          <span class="code-comment"># Definición de imagen para Render con extensión zip</span>
+    ├── .dockerignore       <span class="code-comment"># Exclusión de archivos voluminosos (.git, vendor, .env)</span>
+    ├── app/                <span class="code-comment"># Controladores y lógica de la aplicación</span>
+    ├── bootstrap/          <span class="code-comment"># Inicialización del framework</span>
+    ├── config/             <span class="code-comment"># Configuraciones del sistema</span>
+    ├── database/           <span class="code-comment"># Migraciones y base de datos local (database.sqlite)</span>
+    ├── public/             <span class="code-comment"># Punto de entrada HTTP público (index.php)</span>
+    ├── resources/          <span class="code-comment"># Vistas Blade y recursos estáticos</span>
+    ├── routes/             <span class="code-comment"># Definición de rutas web (routes/web.php)</span>
+    ├── storage/            <span class="code-comment"># Sesiones, logs y caché del framework</span>
+    ├── artisan             <span class="code-comment"># Interfaz de línea de comandos de Laravel</span>
+    ├── composer.json       <span class="code-comment"># Árbol de dependencias del proyecto PHP</span>
+    └── composer.lock       <span class="code-comment"># Bloqueo de versiones deterministas</span></code></pre>
+      </div>
+    </section>
+
+    <!-- Fases Técnicas y Galería de Evidencias (13 Imágenes) -->
+    <section class="card">
+      <div class="card-header">
+        <h2>Procedimiento Técnico de Implementación</h2>
+        <span class="tag-status">Bitácora Detallada</span>
+      </div>
+
+      <!-- Fase 1 -->
+      <article class="step-card">
+        <div class="step-header">
+          <span class="step-num step-docker-bg">1</span>
+          <div>
+            <h3>Fase 1: Infraestructura Local con Docker y Docker Compose</h3>
+            <span class="step-tag">Aislamiento de Entorno · PHP 8.4 & Composer 2.10</span>
+          </div>
+        </div>
+        <p>
+          Para evitar discrepancias entre versiones locales de PHP en el sistema anfitrión, se implementó un orquestador <code>docker-compose.yml</code> basado en la imagen oficial <code>php:8.4-cli</code>. Este archivo monta el directorio de trabajo local <code>./src</code> en <code>/app</code> dentro del contenedor y mapea el puerto <code>8000:8000</code>.
+        </p>
+        <pre><code>services:
+  laravel:
+    image: php:8.4-cli
+    container_name: hola-laravel
+    working_dir: /app
+    volumes:
+      - ./src:/app
+    ports:
+      - "8000:8000"
+    stdin_open: true
+    tty: true</code></pre>
+        <p>
+          Al iniciar el contenedor con <code>docker compose up -d</code> y acceder con <code>docker exec -it hola-laravel bash</code>, se validaron las versiones de las herramientas fundamentales: <strong>Composer version 2.10.03</strong> y <strong>PHP 8.4.27 (cli)</strong>.
+        </p>
+        <div class="img-grid">
+          <figure class="img-wrapper">
+            <img src="imagenes/01_laravel.png" alt="Código de docker-compose.yml para entorno local">
+            <figcaption class="img-caption">IMG01: Definición del servicio laravel en docker-compose.yml</figcaption>
+          </figure>
+          <figure class="img-wrapper">
+            <img src="imagenes/02_laravel.png" alt="Verificación de versiones Composer 2.10.03 y PHP 8.4.27">
+            <figcaption class="img-caption">IMG02: Verificación de binarios: Composer 2.10.03 y PHP 8.4.27 en terminal</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Fase 2 -->
+      <article class="step-card">
+        <div class="step-header">
+          <span class="step-num step-docker-bg">2</span>
+          <div>
+            <h3>Fase 2: Docker para Producción y Reglas de Exclusión</h3>
+            <span class="step-tag">src/Dockerfile & src/.dockerignore</span>
+          </div>
+        </div>
+        <p>
+          Para el despliegue en la nube mediante Render, se elaboró un <code>Dockerfile</code> específico dentro de <code>src/</code> que compila la extensión requerida <code>libzip-dev</code>, instala Composer mediante una estrategia multi-stage y optimiza las dependencias con <code>composer install --no-dev --optimize-autoloader</code>. Paralelamente, se redactó <code>.dockerignore</code> para evitar subir carpetas temporales y vendor al contexto de construcción.
+        </p>
+        <div class="img-grid">
+          <figure class="img-wrapper">
+            <img src="imagenes/03_laravel.png" alt="Código del Dockerfile para producción">
+            <figcaption class="img-caption">IMG03: Especificación del Dockerfile con PHP 8.4-cli y multi-stage Composer</figcaption>
+          </figure>
+          <figure class="img-wrapper">
+            <img src="imagenes/04_laravel.png" alt="Reglas de exclusión en .dockerignore">
+            <figcaption class="img-caption">IMG04: Configuración de exclusiones (.git, .env, vendor) en .dockerignore</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Fase 3 -->
+      <article class="step-card">
+        <div class="step-header">
+          <span class="step-num step-docker-bg">3</span>
+          <div>
+            <h3>Fase 3: Puesta en Marcha y Verificación Local</h3>
+            <span class="step-tag">Artisan Serve · http://localhost:8000</span>
+          </div>
+        </div>
+        <p>
+          Antes de transferir la solución a la nube, se arrancó el servidor embebido de Laravel dentro del contenedor enlazando la interfaz de red global:
+        </p>
+        <pre><code>php artisan serve --host=0.0.0.0 --port=8000</code></pre>
+        <p>
+          La aplicación respondió satisfactoriamente en el puerto mapeado de la máquina anfitriona (<code>http://127.0.0.1:8000</code>), corroborando el procesamiento del pipeline MVC.
+        </p>
+        <div class="img-grid">
+          <figure class="img-wrapper">
+            <img src="imagenes/05_laravel.png" alt="Servidor Artisan arrancando en el contenedor">
+            <figcaption class="img-caption">IMG05: Ejecución del comando php artisan serve --host=0.0.0.0 --port=8000</figcaption>
+          </figure>
+          <figure class="img-wrapper">
+            <img src="imagenes/06_laravel.png" alt="Aplicación Laravel respondiendo en el navegador local">
+            <figcaption class="img-caption">IMG06: Verificación de la aplicación web activa en localhost:8000</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Fase 4 -->
+      <article class="step-card">
+        <div class="step-header">
+          <span class="step-num step-docker-bg">4</span>
+          <div>
+            <h3>Fase 4: Control de Versiones con Git y GitHub</h3>
+            <span class="step-tag">Auditoría de Archivos, SQLite Forzada y Push Remoto</span>
+          </div>
+        </div>
+        <p>
+          Se inicializó el repositorio con <code>git init</code>. Durante la inspección con <code>git status</code>, se detectó que el archivo de base de datos SQLite no estaba siendo rastreado. Para resolverlo, se forzó su inclusión:
+        </p>
+        <pre><code># Verificación de seguimiento de base de datos
+git ls-files | grep sqlite
+
+# Inclusión forzada requerida para ejecución en la nube
+git add -f src/database/database.sqlite
+
+# Commit y push remoto
+git commit -m "Proyecto completo Hola-Laravel"
+git branch -M main
+git remote add origin git@github.com:jorgerickdev/hola-laravel.git
+git push -u origin main</code></pre>
+        <div class="img-grid">
+          <figure class="img-wrapper">
+            <img src="imagenes/07_laravel.png" alt="Revisión con git status antes del commit">
+            <figcaption class="img-caption">IMG07: Inspección del árbol de trabajo con git status antes del commit</figcaption>
+          </figure>
+          <figure class="img-wrapper">
+            <img src="imagenes/08_laravel.png" alt="Primer git push exitoso al repositorio remoto">
+            <figcaption class="img-caption">IMG08: Sincronización exitosa con la rama remota main en GitHub</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Fase 5 -->
+      <article class="step-card">
+        <div class="step-header">
+          <span class="step-num step-docker-bg">5</span>
+          <div>
+            <h3>Fase 5: Aprovisionamiento del Web Service en Render</h3>
+            <span class="step-tag">PaaS Cloud · Docker Runtime & Variables de Entorno</span>
+          </div>
+        </div>
+        <p>
+          En la plataforma de Render, se seleccionó <em>New &gt; Web Service</em> conectando directamente el repositorio público <code>jorgerickdev/hola-laravel</code>. Se seleccionó el runtime Docker y se inyectaron las variables indispensables de producción extraídas del archivo <code>.env</code> local:
+        </p>
+        <ul class="step-list">
+          <li><code>APP_KEY</code>: Clave criptográfica para firmas HMAC y cifrado de sesiones.</li>
+          <li><code>APP_DEBUG</code>: Configurado para control de excepciones en runtime.</li>
+        </ul>
+        <div class="img-grid single-img">
+          <figure class="img-wrapper">
+            <img src="imagenes/09_laravel.png" alt="Creación del Web Service en el dashboard de Render">
+            <figcaption class="img-caption">IMG09: Configuración inicial del servicio web en el panel de Render</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Fase 6: Incidencias Resueltas -->
+      <article class="step-card step-card-alert">
+        <div class="step-header">
+          <span class="step-num step-alert-bg">6</span>
+          <div>
+            <h3>Fase 6: Bitácora de Incidencias Técnicas y Diagnóstico DevOps</h3>
+            <span class="step-tag" style="background:#fee2e2; color:#b91c1c; border-color:#fca5a5;">Resolución de Fallas Críticas de Compilación</span>
+          </div>
+        </div>
+        <p>
+          Durante los primeros despliegues automáticos, el motor de construcción de Render arrojó errores que interrumpieron la publicación ("puras fallas"):
+        </p>
+
+        <div class="incident-box error-box">
+          <h4>❌ Incidencia A: Dockerfile no localizado</h4>
+          <p><strong>Error en log:</strong> <code>failed to read dockerfile: open Dockerfile: no such file or directory</code></p>
+          <p><strong>Causa:</strong> Por defecto, Render busca <code>./Dockerfile</code> en la raíz del repositorio, pero el archivo se diseñó dentro de la subcarpeta <code>src/Dockerfile</code>.</p>
+        </div>
+
+        <div class="incident-box error-box">
+          <h4>❌ Incidencia B: Composer no encontraba dependencias</h4>
+          <p><strong>Error en log:</strong> <code>Composer could not find a composer.json file in /app</code></p>
+          <p><strong>Causa:</strong> El contexto de construcción (*Docker Build Context*) estaba fijado en la raíz <code>.</code>, por lo que el comando <code>COPY . .</code> no posicionaba los archivos de Laravel en el directorio raíz de la imagen.</p>
+        </div>
+
+        <div class="incident-box success-box">
+          <h4>✅ Solución Técnica Aplicada en Render</h4>
+          <p>En la sección <em>Settings &gt; Build &amp; Deploy</em> de Render, se ajustaron con precisión los parámetros de compilación:</p>
+          <ul>
+            <li><strong>Dockerfile Path:</strong> <code>src/Dockerfile</code></li>
+            <li><strong>Docker Build Context Directory:</strong> <code>src</code></li>
+          </ul>
+        </div>
+
+        <div class="img-grid">
+          <figure class="img-wrapper">
+            <img src="imagenes/10_laravel.png" alt="Registro de fallas de compilación en Render">
+            <figcaption class="img-caption">IMG10: Logs de error en Render por discrepancia de ruta y contexto</figcaption>
+          </figure>
+          <figure class="img-wrapper">
+            <img src="imagenes/11_laravel.png" alt="Ajuste de Dockerfile Path y Build Context en Render">
+            <figcaption class="img-caption">IMG11: Configuración corregida: Dockerfile Path en src/ y Build Context en src</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- Fase 7 -->
+      <article class="step-card">
+        <div class="step-header">
+          <span class="step-num step-docker-bg">7</span>
+          <div>
+            <h3>Fase 7: Verificación de Salud en Producción y Disponibilidad</h3>
+            <span class="step-tag">Certificación 200 OK · https://hola-laravel.onrender.com</span>
+          </div>
+        </div>
+        <p>
+          Tras corregir el contexto de compilación, Render construyó la imagen Docker en 45 segundos, asignó el certificado SSL/TLS automático y desplegó el contenedor en su red global. Los logs confirmaron el estado operativo: <strong>"Your service is live 🎉"</strong>.
+        </p>
+        <p>
+          Se accedió desde Mozilla Firefox a la URL pública, comprobando que la aplicación procesa las solicitudes HTTP en la nube con normalidad:
+        </p>
+        <div class="img-grid">
+          <figure class="img-wrapper">
+            <img src="imagenes/12_laravel.png" alt="Logs de Render confirmando que el servicio está vivo">
+            <figcaption class="img-caption">IMG12: Logs de Render confirmando el despliegue exitoso (Service is live)</figcaption>
+          </figure>
+          <figure class="img-wrapper">
+            <img src="imagenes/13_laravel.png" alt="Aplicación Laravel desplegada en Render navegando en Firefox">
+            <figcaption class="img-caption">IMG13: Acceso público confirmado en https://hola-laravel.onrender.com en Firefox</figcaption>
+          </figure>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Tabla Comparativa y Checklist de Calidad -->
+    <section class="card">
+      <div class="card-header">
+        <h2>Matriz de Cumplimiento Técnico y Evaluación DevOps</h2>
+        <span class="tag-status">100% Validado</span>
+      </div>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Criterio Técnico</th>
+              <th>Entorno / Parámetro</th>
+              <th>Evidencia / Verificación</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Contenedorización Base</strong></td>
+              <td>Docker Compose (<code>php:8.4-cli</code>)</td>
+              <td>Mapeo de volúmenes <code>./src:/app</code> y puerto 8000</td>
+              <td><span class="badge-status-ok">Completado</span></td>
+            </tr>
+            <tr>
+              <td><strong>Gestor de Dependencias</strong></td>
+              <td>Composer 2.10.03</td>
+              <td>Árbol de dependencias resuelto sin ensuciar el host</td>
+              <td><span class="badge-status-ok">Completado</span></td>
+            </tr>
+            <tr>
+              <td><strong>Control de Versiones</strong></td>
+              <td>Git &amp; GitHub</td>
+              <td>Inclusión forzada de <code>database.sqlite</code> con <code>git add -f</code></td>
+              <td><span class="badge-status-ok">Completado</span></td>
+            </tr>
+            <tr>
+              <td><strong>Dockerfile Multi-Stage</strong></td>
+              <td>Producción (Render)</td>
+              <td>Extensiones <code>libzip</code> y optimización <code>--no-dev</code></td>
+              <td><span class="badge-status-ok">Completado</span></td>
+            </tr>
+            <tr>
+              <td><strong>Build Context Optimization</strong></td>
+              <td>Render PaaS</td>
+              <td>Rutas corregidas a <code>src/Dockerfile</code> y <code>src</code></td>
+              <td><span class="badge-status-ok">Completado</span></td>
+            </tr>
+            <tr>
+              <td><strong>Disponibilidad Pública</strong></td>
+              <td>Render Web Service</td>
+              <td>URL con HTTPS activo: <code>https://hola-laravel.onrender.com</code></td>
+              <td><span class="badge-status-ok">Completado</span></td>
+            </tr>
+            <tr>
+              <td><strong>Evidencia Audiovisual</strong></td>
+              <td>OneDrive / Google Drive</td>
+              <td>Video tutorial demostrativo grabado y disponible en la nube</td>
+              <td><span class="badge-status-ok">Completado</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Modal Interactivo Lightbox para Visualización en Pantalla Completa -->
+  <div id="lightboxOverlay" class="lightbox-overlay" onclick="cerrarLightbox(event)">
+    <div class="lightbox-wrapper">
+      <button class="lightbox-close-btn" onclick="forzarCerrarLightbox()" title="Cerrar (Esc)">&times;</button>
+      <img id="lightboxImg" class="lightbox-img" src="" alt="Captura ampliada en alta resolución">
+      <div id="lightboxCaption" class="lightbox-caption"></div>
+      <span class="lightbox-hint">Presiona ESC o haz clic fuera para cerrar</span>
+    </div>
+  </div>
+
+  <!-- Pie de Página Institucional (3 Columnas con Alto Contraste) -->
+  <footer class="footer-global">
+    <div class="footer-container">
+      
+      <!-- Columna 1: Datos Académicos -->
+      <div class="footer-col">
+        <div class="footer-brand">
+          <span class="brand-unir">UNIR</span>
+          <span class="brand-sub">México</span>
+        </div>
+        <p><strong>Programa:</strong> Ingeniería en Sistemas Computacionales</p>
+        <p><strong>Asignatura:</strong> Desarrollo de Aplicaciones en Red (DAR)</p>
+        <p><strong>Actividad:</strong> Actividad 2 — Tutorial de un Framework</p>
+        <p><strong>Caso de Estudio:</strong> Aprovisionamiento de Laravel con Docker y Render</p>
+      </div>
+
+      <!-- Columna 2: Equipo de Trabajo -->
+      <div class="footer-col">
+        <h4>Integrantes (Grupo C)</h4>
+        <ul class="team-list">
+          <li><strong>Ricardo Trujillo</strong> (<code>jorgerickdev</code>)</li>
+          <li><strong>Jperaltaa</strong></li>
+          <li><strong>Vic</strong></li>
+          <li><strong>Borbolla</strong></li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Enlaces y Evidencias Oficiales -->
+      <div class="footer-col">
+        <h4>Evidencias Oficiales en la Nube</h4>
+        <ul class="links-list">
+          <li>
+            <a href="https://hola-laravel.onrender.com" target="_blank">
+              🌍 Aplicación en Render (Producción)
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/jorgerickdev/hola-laravel" target="_blank">
+              🐳 Repositorio Hola-Laravel (GitHub)
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/jorgerickdev/DARact2_laravel-Deployment" target="_blank">
+              📁 Repositorio Sitio Web (GitHub Pages)
+            </a>
+          </li>
+          <li>
+            <a href="https://1drv.ms/v/c/1629febfca0615c7/IQDMNj4BLqM3QJ90HHEnIODvAU_-VzFraaE0atP-KJ5CDhY?e=JnxJmZ" target="_blank">
+              📹 Video Tutorial Oficial (OneDrive)
+            </a>
+          </li>
+          <li>
+            <a href="https://drive.google.com/file/d/1p2APaUTHZzPZKgGGRocLRFYxesdJd89o/view?usp=sharing" target="_blank">
+              📂 Respaldo de Video (Google Drive)
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>Desarrollo de Aplicaciones en Red — Octubre 2026 | UNIR México · Grupo C</p>
+    </div>
+  </footer>
+
+  <!-- Script Interactivo del Módulo -->
+  <script src="code.js"></script>
 </body>
 </html>
